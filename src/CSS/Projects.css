@@ -1,0 +1,67 @@
+
+.projects-section {
+    padding: 8rem 10%;
+    background: #f3f4e8;
+    min-height: 100vh;
+}
+
+.projects-header { margin-bottom: 4rem; }
+.projects-title { font-size: clamp(2rem, 5vw, 3rem); color: #1a1a1a; margin-top: 0.5rem; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.project-glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(163, 184, 215, 0.2);
+    height: 100%; /* Ensures cards in the same row are equal height */
+}
+
+.project-glass-card:hover {
+    transform: translateY(-10px);
+    background: #fff;
+    border-color: var(--accent);
+}
+
+.project-icon-wrapper {
+    width: 70px; height: 70px; background: var(--accent);
+    border-radius: 20px; display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; color: white; margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-name { font-size: 1.4rem; color: #333; margin-bottom: 1.5rem; font-weight: 700; }
+
+.github-btn {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: #fff; background: #1a1a1a;
+    padding: 0.8rem 1.5rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem;
+    transition: 0.3s;
+    margin-top: auto;
+}
+.github-btn:hover { opacity: 0.8; }
+
+.empty-card { border: 2px dashed #ddd; background: transparent; opacity: 0.5; box-shadow: none;}
+.empty-card .project-icon-wrapper { background: #eee; color: #999; }
+
+
+@media screen and (max-width: 1024px) {
+    .projects-section { padding: 6rem 5%; }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-glass-card { padding: 2rem 1.5rem; }
+}
