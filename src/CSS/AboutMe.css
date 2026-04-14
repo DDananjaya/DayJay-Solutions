@@ -1,8 +1,4 @@
-/* src/CSS/AboutMe.css */
 
-/* ────────────────────────────────────────────
-   Section Background
-──────────────────────────────────────────── */
 .about-section {
     padding: 10rem 6%;
     overflow: hidden;
@@ -15,9 +11,7 @@
             #ffffff;
 }
 
-/* ────────────────────────────────────────────
-   Two-column grid
-──────────────────────────────────────────── */
+
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,9 +20,7 @@
     width: 100%;
 }
 
-/* ────────────────────────────────────────────
-   Text side — slide in from left
-──────────────────────────────────────────── */
+
 .about-text-content {
     animation: fadeSlideLeft 0.9s ease both;
 }
@@ -86,9 +78,7 @@
     box-shadow: 0 8px 20px rgba(165, 216, 255, 0.3);
 }
 
-/* ────────────────────────────────────────────
-   Orbit container
-──────────────────────────────────────────── */
+
 .about-visual-orbit {
     position: relative;
     /* icon radius ≈ 200px from center → container 460px + icon 58px overflow */
@@ -108,7 +98,7 @@
     to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ── Decorative dashed ring (static, no rotation) ── */
+
 .orbit-ring {
     position: absolute;
     width:  min(390px, 83vw);
@@ -118,7 +108,7 @@
     pointer-events: none;
 }
 
-/* inner glow ring */
+
 .about-visual-orbit::before {
     content: '';
     position: absolute;
@@ -129,7 +119,7 @@
     pointer-events: none;
 }
 
-/* outer background pulse */
+
 .about-visual-orbit::after {
     content: '';
     position: absolute;
@@ -149,9 +139,6 @@
     50%       { transform: scale(1.06); opacity: 1;   }
 }
 
-/* ────────────────────────────────────────────
-   Center profile image
-──────────────────────────────────────────── */
 .center-profile {
     position: absolute;
     width: 155px;
@@ -193,10 +180,6 @@
     border-radius: 50%;
 }
 
-/* ────────────────────────────────────────────
-   Orbit icons — each travels its own circular
-   path, so click hit-area always matches visuals
-──────────────────────────────────────────── */
 .orbit-icon {
     position: absolute;
     /* icon is 58×58, center of orbit is 50%/50% */
@@ -232,45 +215,37 @@
     animation-play-state: paused !important;
 }
 
-/*
-  Orbit radius = 195px (half of 390px ring)
-  Each icon starts at one of the 4 cardinal points and
-  goes around a full 360°. Using translateX/translateY in @keyframes
-  keeps the DOM element's true centre on the circle at all times,
-  so pointer events always align with the visible icon.
-*/
 
-/* Top  → 0°  (0, -195px) */
+
+
 .orbit-icon--1 { animation: orbitPath1 20s linear infinite; }
 @keyframes orbitPath1 {
     from { transform: rotate(  0deg) translateY(-195px) rotate(  0deg); }
     to   { transform: rotate(360deg) translateY(-195px) rotate(-360deg); }
 }
 
-/* Right → 90° (195px, 0) */
+
 .orbit-icon--2 { animation: orbitPath2 20s linear infinite; }
 @keyframes orbitPath2 {
     from { transform: rotate( 90deg) translateY(-195px) rotate( -90deg); }
     to   { transform: rotate(450deg) translateY(-195px) rotate(-450deg); }
 }
 
-/* Bottom → 180° (0, 195px) */
+
 .orbit-icon--3 { animation: orbitPath3 20s linear infinite; }
 @keyframes orbitPath3 {
     from { transform: rotate(180deg) translateY(-195px) rotate(-180deg); }
     to   { transform: rotate(540deg) translateY(-195px) rotate(-540deg); }
 }
 
-/* Left → 270° (-195px, 0) */
+
 .orbit-icon--4 { animation: orbitPath4 20s linear infinite; }
 @keyframes orbitPath4 {
     from { transform: rotate(270deg) translateY(-195px) rotate(-270deg); }
     to   { transform: rotate(630deg) translateY(-195px) rotate(-630deg); }
 }
 
-/* ────────────────────────────────────────────
-   Responsive
-──────────────────────────────────────────── */
+
 @media screen and (max-width: 1100px) {
     .about-section { padding: 7rem 5%; }
     .about-container {
@@ -288,7 +263,7 @@
     .skills-tags { justify-content: center; }
     .about-bio   { text-align: center; }
 
-    /* Shrink orbit radius to match ring */
+
     .orbit-icon--1 { animation: orbitPathSm1 20s linear infinite; }
     .orbit-icon--2 { animation: orbitPathSm2 20s linear infinite; }
     .orbit-icon--3 { animation: orbitPathSm3 20s linear infinite; }
