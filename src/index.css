@@ -1,0 +1,77 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Main Palette - Brighter Pastels */
+    --primary: #B2F2BB; /* Mint Green */
+    --primary-light: #e6fcf5;
+    --primary-dark: #86e093;
+
+    --secondary: #A5D8FF; /* Light Blue */
+    --secondary-light: #e7f5ff;
+    --secondary-dark: #74c0fc;
+
+    --lavender: #E5DBFF;
+    --lavender-light: #f3f0ff;
+
+    /* Neutral Palette - Extra White/Clean Vibe */
+    --bg-light: #ffffff; /* Pure white as base */
+    --bg-off: #fdfdfd;   /* Very subtle off-white */
+    --text-main: #343a40;
+    --text-muted: #868e96;
+    --white: #ffffff;
+
+    /* UI Tokens */
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.03);
+    --shadow-float: 0 15px 35px rgba(0, 0, 0, 0.06);
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Base Spacer */
+section {
+    padding: 10rem 6%;
+    position: relative;
+    background-color: var(--white);
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+ul {
+    list-style: none;
+}

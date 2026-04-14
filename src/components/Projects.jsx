@@ -1,15 +1,15 @@
 
 import React from 'react';
 import '../CSS/Projects.css';
-import { FaDumbbell, FaChair, FaNetworkWired, FaHospital, FaPlus, FaGithub } from 'react-icons/fa';
+import {FaDumbbell, FaChair, FaNetworkWired, FaHospital, FaPlus, FaGithub, FaDatabase} from 'react-icons/fa';
 
 const projectData = [
     { title: "Gym PR System", icon: <FaDumbbell />, link: "https://github.com/DDananjaya/gym-pr-system", color: "#a3b8d7" },
     { title: "PK Furniture EAD", icon: <FaChair />, link: "https://github.com/DDananjaya/PK-Furniture-EAD-", color: "#bce3d4" },
     { title: "Euro Call Redesign", icon: <FaNetworkWired />, link: "https://github.com/DDananjaya/Euro-call-Network-Redesign", color: "#f3b9bd" },
     { title: "Hospital Management", icon: <FaHospital />, link: "https://github.com/DDananjaya/HospitalManagementSystem", color: "#ebd0db" },
-    { title: "Next Big Idea", icon: <FaPlus />, link: "#", color: "transparent", isEmpty: true },
-    { title: "Future Project", icon: <FaPlus />, link: "#", color: "transparent", isEmpty: true }
+    { title: "GymRats.LK", icon: <FaDumbbell />, link: "https://github.com/DDananjaya/GymRats.LK", color: "#a3b8d7" },
+    { title: "Software-Consultancy-Database", icon: <FaDatabase />, link: "https://github.com/DDananjaya/Software-Consultancy-Database", color: "#bce3d4"}
 ];
 
 const Projects = () => {

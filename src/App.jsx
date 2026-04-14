@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CSS/App.css';
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 
 function App() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <div className="landing-container">
 
@@ -18,11 +29,15 @@ function App() {
                     </div>
                 </div>
 
-                <ul className="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#AboutMe">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <div className="mobile-menu-icon" onClick={toggleMenu}>
+                    {isMenuOpen ? <FaTimes /> : <FaBars />}
+                </div>
+
+                <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+                    <li><a href="#home" onClick={closeMenu}>Home</a></li>
+                    <li><a href="#AboutMe" onClick={closeMenu}>About</a></li>
+                    <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+                    <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
                 </ul>
             </nav>
             <Hero />
